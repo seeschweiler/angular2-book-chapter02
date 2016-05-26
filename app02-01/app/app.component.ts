@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 
 @Component({
   selector: 'my-app',
@@ -6,7 +6,7 @@ import {Component} from 'angular2/core'
       <h4>Todos List</h4>
       <h5>Number of Todos: <span class="badge">{{todos.length}}</span></h5>
       <ul class="list-group">
-        <li *ngFor="#todo of todos" class="list-group-item">
+        <li *ngFor="let todo of todos" class="list-group-item">
           {{todo}}
         </li>
       </ul>
@@ -16,7 +16,7 @@ import {Component} from 'angular2/core'
       </div>
     `
 })
-export class App {
+export class AppComponent {
   todos: Array<string>;
   constructor() {
     this.todos = ["Todo 1", "Todo 2", "Todo 3"];
